@@ -50,7 +50,7 @@
   },
   "scripts": {
     "prebuild": "npm run -s clean",
-    "build": "tsc --module es2015 && rollup -c -o index.js && dts-bundle --name vue-eslint-parser --main .temp/index.d.ts --out ../index.d.ts",
+    "build": "tsc --module es2015 && rollup -c -o index.js && dts-bundle --name mpx-eslint-parser --main .temp/index.d.ts --out ../index.d.ts",
     "clean": "rimraf .nyc_output .temp coverage index.*",
     "codecov": "codecov",
     "coverage": "opener ./coverage/lcov-report/index.html",
@@ -69,7 +69,7 @@
     "watch:tsc": "tsc --module es2015 --watch",
     "watch:rollup": "wait-on .temp/index.js && rollup -c -o index.js --watch",
     "watch:test": "wait-on index.js && warun index.js \"test/*.js\" \"test/fixtures/ast/*/*.json\" \"test/fixtures/*\" --debounce 1000 --no-initial -- nyc mocha \"test/*.js\" --reporter dot --timeout 10000",
-    "watch:update-ast": "wait-on index.js && warun index.js \"test/fixtures/ast/*/*.vue\" -- node scripts/update-fixtures-ast.js",
+    "watch:update-ast": "wait-on index.js && warun index.js \"test/fixtures/ast/*/*.mpx\" -- node scripts/update-fixtures-ast.js",
     "watch:coverage-report": "wait-on coverage/lcov-report/index.html && opener coverage/lcov-report/index.html"
   },
   "repository": {
