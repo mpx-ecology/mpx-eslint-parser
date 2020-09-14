@@ -1,5 +1,5 @@
 /**
- * @author pagnkelly <https://github.com/mysticatea>
+ * @author pagnkelly <https://github.com/pagnkelly>
  * @copyright 2020 pagnkelly. All rights reserved.
  * See LICENSE file in root directory for full license.
  */
@@ -19,7 +19,7 @@ export default {
         sourcemap: true,
         sourcemapFile: "index.js.map",
         banner: `/**
- * @author pagnkelly <https://github.com/mysticatea>
+ * @author pagnkelly <https://github.com/pagnkelly>
  * See LICENSE file in root directory for full license.
  */`,
     },
