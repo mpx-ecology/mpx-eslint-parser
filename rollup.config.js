@@ -1,6 +1,6 @@
 /**
- * @author Toru Nagashima <https://github.com/mysticatea>
- * @copyright 2017 Toru Nagashima. All rights reserved.
+ * @author pagnkelly <https://github.com/mysticatea>
+ * @copyright 2020 pagnkelly. All rights reserved.
  * See LICENSE file in root directory for full license.
  */
 import resolve from "rollup-plugin-node-resolve"
@@ -19,7 +19,7 @@ export default {
         sourcemap: true,
         sourcemapFile: "index.js.map",
         banner: `/**
- * @author Toru Nagashima <https://github.com/mysticatea>
+ * @author pagnkelly <https://github.com/mysticatea>
  * See LICENSE file in root directory for full license.
  */`,
     },
