@@ -10,7 +10,7 @@ The ESLint custom parser for `.mpx` files.
 
 ## ⤴️ Motivation
 
-This parser allows us to lint the `<template>` of `.mpx` files. We can make mistakes easily on `<template>` if we use complex directives and expressions in the template. This parser and the rules of [eslint-plugin-mpx](https://github.com/mpxjs/eslint-plugin-mpx) would catch some of the mistakes.
+This parser allows us to lint the `<template>` of `.mpx` files. We can make mistakes easily on `<template>` if we use complex directives and expressions in the template. This parser and the rules of [eslint-plugin-mpx](https://github.com/pagnkelly/eslint-plugin-mpx) would catch some of the mistakes.
 
 ## 💿 Installation
 
