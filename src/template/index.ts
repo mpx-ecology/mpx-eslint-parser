@@ -174,7 +174,7 @@ function parseDirectiveKeyStatically(
     }
     directiveKey.modifiers = modifiers.filter(isNotEmptyModifier)
 
-    if (directiveKey.name.name === "v-") {
+    if (directiveKey.name.name === "wx:") {
         insertError(
             document,
             new ParseError(
@@ -392,11 +392,11 @@ function createDirectiveKey(
     const tokens = parseDirectiveKeyTokens(directiveKey)
     replaceTokens(document, directiveKey, tokens)
 
-    // Drop `v-` prefix.
-    if (directiveKey.name.name.startsWith("v-")) {
+    // Drop `wx:` prefix.
+    if (directiveKey.name.name.startsWith("wx:")) {
         directiveKey.name.name = directiveKey.name.name.slice(2)
     }
-    if (directiveKey.name.rawName.startsWith("v-")) {
+    if (directiveKey.name.rawName.startsWith("wx:")) {
         directiveKey.name.rawName = directiveKey.name.rawName.slice(2)
     }
 
