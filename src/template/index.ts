@@ -34,8 +34,8 @@ import {
     parseSlotScopeExpression,
 } from "../script"
 
-const shorthandSign = /^[.:@#]/u
-const shorthandNameMap = { ":": "bind", ".": "bind", "@": "on", "#": "slot" }
+// const shorthandSign = /^[.:@#]/u
+// const shorthandNameMap = { ":": "bind", ".": "bind", "@": "on", "#": "slot" }
 const invalidDynamicArgumentNextChar = /^[\s\r\n=/>]$/u
 
 /**
@@ -125,17 +125,17 @@ function parseDirectiveKeyStatically(
     }
 
     // Parse.
-    if (shorthandSign.test(text)) {
-        const sign = text[0] as ":" | "." | "@" | "#"
-        directiveKey.name = createIdentifier(0, 1, shorthandNameMap[sign])
-        i = 1
-    } else {
-        const colon = text.indexOf(":")
-        if (colon !== -1) {
-            directiveKey.name = createIdentifier(0, colon)
-            i = colon + 1
-        }
-    }
+    // if (shorthandSign.test(text)) {
+    //     const sign = text[0] as ":" | "." | "@" | "#"
+    //     directiveKey.name = createIdentifier(0, 1, shorthandNameMap[sign])
+    //     i = 1
+    // } else {
+    //     const colon = text.indexOf(":")
+    //     if (colon !== -1) {
+    //         directiveKey.name = createIdentifier(0, colon)
+    //         i = colon + 1
+    //     }
+    // }
 
     if (directiveKey.name != null && text[i] === "[") {
         // Dynamic argument.
@@ -394,10 +394,10 @@ function createDirectiveKey(
 
     // Drop `wx:` prefix.
     if (directiveKey.name.name.startsWith("wx:")) {
-        directiveKey.name.name = directiveKey.name.name.slice(2)
+        directiveKey.name.name = directiveKey.name.name.slice(3)
     }
     if (directiveKey.name.rawName.startsWith("wx:")) {
-        directiveKey.name.rawName = directiveKey.name.rawName.slice(2)
+        directiveKey.name.rawName = directiveKey.name.rawName.slice(3)
     }
 
     // Parse dynamic argument.

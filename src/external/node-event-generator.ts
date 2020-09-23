@@ -221,7 +221,7 @@ export default class NodeEventGenerator {
              * node versions will have eventNames() anyway.
              */
             : Object.keys((emitter as any)._events)
-
+        
         for (const rawSelector of eventNames) {
             if (typeof rawSelector === "symbol") {
                 continue
