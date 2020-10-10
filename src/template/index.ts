@@ -137,6 +137,12 @@ function parseDirectiveKeyStatically(
     //     }
     // }
 
+    const colon = text.lastIndexOf(":")
+    if (colon > 2) {
+        directiveKey.name = createIdentifier(0, colon)
+        i = colon + 1
+    }
+
     if (directiveKey.name != null && text[i] === "[") {
         // Dynamic argument.
         const len = text.slice(i).lastIndexOf("]")
