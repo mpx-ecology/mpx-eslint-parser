@@ -26,23 +26,12 @@
                                 "text": ":a=\"a1,a2\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": ":a",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": ":",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "a",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"a1,a2\"",
                                         "children": []
                                     }
@@ -53,42 +42,14 @@
                                 "text": ":b=\"(b1,b2)\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": ":b",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": ":",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "b",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"(b1,b2)\"",
-                                        "children": [
-                                            {
-                                                "type": "SequenceExpression",
-                                                "text": "b1,b2",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "b1",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "b2",
-                                                        "children": []
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

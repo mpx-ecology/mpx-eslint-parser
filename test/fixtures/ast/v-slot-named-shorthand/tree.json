@@ -40,54 +40,14 @@
                                         "text": "#header=\"{ foo }\"",
                                         "children": [
                                             {
-                                                "type": "VDirectiveKey",
+                                                "type": "VIdentifier",
                                                 "text": "#header",
-                                                "children": [
-                                                    {
-                                                        "type": "VIdentifier",
-                                                        "text": "#",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "VIdentifier",
-                                                        "text": "header",
-                                                        "children": []
-                                                    }
-                                                ]
+                                                "children": []
                                             },
                                             {
-                                                "type": "VExpressionContainer",
+                                                "type": "VLiteral",
                                                 "text": "\"{ foo }\"",
-                                                "children": [
-                                                    {
-                                                        "type": "VSlotScopeExpression",
-                                                        "text": "{ foo }",
-                                                        "children": [
-                                                            {
-                                                                "type": "ObjectPattern",
-                                                                "text": "{ foo }",
-                                                                "children": [
-                                                                    {
-                                                                        "type": "Property",
-                                                                        "text": "foo",
-                                                                        "children": [
-                                                                            {
-                                                                                "type": "Identifier",
-                                                                                "text": "foo",
-                                                                                "children": []
-                                                                            },
-                                                                            {
-                                                                                "type": "Identifier",
-                                                                                "text": "foo",
-                                                                                "children": []
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
+                                                "children": []
                                             }
                                         ]
                                     }

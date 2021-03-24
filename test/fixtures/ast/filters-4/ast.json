@@ -130,9 +130,9 @@
                                     "column": 5
                                 }
                             },
-                            "directive": true,
+                            "directive": false,
                             "key": {
-                                "type": "VDirectiveKey",
+                                "type": "VIdentifier",
                                 "range": [
                                     20,
                                     25
@@ -147,48 +147,11 @@
                                         "column": 14
                                     }
                                 },
-                                "name": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        20,
-                                        21
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 9,
-                                            "line": 2
-                                        },
-                                        "end": {
-                                            "column": 10,
-                                            "line": 2
-                                        }
-                                    },
-                                    "name": "bind",
-                                    "rawName": ":"
-                                },
-                                "argument": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        21,
-                                        25
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 10,
-                                            "line": 2
-                                        },
-                                        "end": {
-                                            "column": 14,
-                                            "line": 2
-                                        }
-                                    },
-                                    "name": "attr",
-                                    "rawName": "attr"
-                                },
-                                "modifiers": []
+                                "name": ":attr",
+                                "rawName": ":attr"
                             },
                             "value": {
-                                "type": "VExpressionContainer",
+                                "type": "VLiteral",
                                 "range": [
                                     26,
                                     68
@@ -203,106 +166,7 @@
                                         "column": 5
                                     }
                                 },
-                                "expression": {
-                                    "type": "VFilterSequenceExpression",
-                                    "expression": {
-                                        "type": "Identifier",
-                                        "start": 36,
-                                        "end": 41,
-                                        "loc": {
-                                            "start": {
-                                                "line": 3,
-                                                "column": 8
-                                            },
-                                            "end": {
-                                                "line": 3,
-                                                "column": 13
-                                            }
-                                        },
-                                        "range": [
-                                            36,
-                                            41
-                                        ],
-                                        "name": "value"
-                                    },
-                                    "filters": [
-                                        {
-                                            "type": "VFilter",
-                                            "range": [
-                                                56,
-                                                62
-                                            ],
-                                            "loc": {
-                                                "start": {
-                                                    "line": 4,
-                                                    "column": 14
-                                                },
-                                                "end": {
-                                                    "line": 4,
-                                                    "column": 20
-                                                }
-                                            },
-                                            "callee": {
-                                                "type": "Identifier",
-                                                "range": [
-                                                    56,
-                                                    62
-                                                ],
-                                                "loc": {
-                                                    "start": {
-                                                        "line": 4,
-                                                        "column": 14
-                                                    },
-                                                    "end": {
-                                                        "line": 4,
-                                                        "column": 20
-                                                    }
-                                                },
-                                                "name": "filter"
-                                            },
-                                            "arguments": []
-                                        }
-                                    ],
-                                    "range": [
-                                        36,
-                                        62
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "line": 3,
-                                            "column": 8
-                                        },
-                                        "end": {
-                                            "line": 4,
-                                            "column": 20
-                                        }
-                                    }
-                                },
-                                "references": [
-                                    {
-                                        "id": {
-                                            "type": "Identifier",
-                                            "start": 36,
-                                            "end": 41,
-                                            "loc": {
-                                                "start": {
-                                                    "line": 3,
-                                                    "column": 8
-                                                },
-                                                "end": {
-                                                    "line": 3,
-                                                    "column": 13
-                                                }
-                                            },
-                                            "range": [
-                                                36,
-                                                41
-                                            ],
-                                            "name": "value"
-                                        },
-                                        "mode": "r"
-                                    }
-                                ]
+                                "value": "\n        value\n            | filter\n    "
                             }
                         }
                     ]
@@ -438,40 +302,22 @@
                 "value": "div"
             },
             {
-                "type": "Punctuator",
-                "range": [
-                    20,
-                    21
-                ],
-                "loc": {
-                    "start": {
-                        "column": 9,
-                        "line": 2
-                    },
-                    "end": {
-                        "column": 10,
-                        "line": 2
-                    }
-                },
-                "value": ":"
-            },
-            {
                 "type": "HTMLIdentifier",
                 "range": [
-                    21,
+                    20,
                     25
                 ],
                 "loc": {
                     "start": {
-                        "column": 10,
-                        "line": 2
+                        "line": 2,
+                        "column": 9
                     },
                     "end": {
-                        "column": 14,
-                        "line": 2
+                        "line": 2,
+                        "column": 14
                     }
                 },
-                "value": "attr"
+                "value": ":attr"
             },
             {
                 "type": "HTMLAssociation",
@@ -492,10 +338,10 @@
                 "value": ""
             },
             {
-                "type": "Punctuator",
+                "type": "HTMLLiteral",
                 "range": [
                     26,
-                    27
+                    68
                 ],
                 "loc": {
                     "start": {
@@ -503,85 +349,11 @@
                         "column": 15
                     },
                     "end": {
-                        "line": 2,
-                        "column": 16
-                    }
-                },
-                "value": "\""
-            },
-            {
-                "type": "Identifier",
-                "value": "value",
-                "start": 36,
-                "end": 41,
-                "loc": {
-                    "start": {
-                        "line": 3,
-                        "column": 8
-                    },
-                    "end": {
-                        "line": 3,
-                        "column": 13
-                    }
-                },
-                "range": [
-                    36,
-                    41
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "value": "|",
-                "range": [
-                    54,
-                    55
-                ],
-                "loc": {
-                    "start": {
-                        "line": 4,
-                        "column": 12
-                    },
-                    "end": {
-                        "line": 4,
-                        "column": 13
-                    }
-                }
-            },
-            {
-                "type": "Identifier",
-                "value": "filter",
-                "range": [
-                    56,
-                    62
-                ],
-                "loc": {
-                    "start": {
-                        "line": 4,
-                        "column": 14
-                    },
-                    "end": {
-                        "line": 4,
-                        "column": 20
-                    }
-                }
-            },
-            {
-                "type": "Punctuator",
-                "range": [
-                    67,
-                    68
-                ],
-                "loc": {
-                    "start": {
-                        "line": 5,
-                        "column": 4
-                    },
-                    "end": {
                         "line": 5,
                         "column": 5
                     }
                 },
-                "value": "\""
+                "value": "\n        value\n            | filter\n    "
             },
             {
                 "type": "HTMLTagClose",

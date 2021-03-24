@@ -36,23 +36,12 @@
                                 "text": ":foo=\"c d\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": ":foo",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": ":",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "foo",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"c d\"",
                                         "children": []
                                     }

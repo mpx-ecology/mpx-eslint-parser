@@ -130,9 +130,9 @@
                                     "column": 69
                                 }
                             },
-                            "directive": true,
+                            "directive": false,
                             "key": {
-                                "type": "VDirectiveKey",
+                                "type": "VIdentifier",
                                 "range": [
                                     18,
                                     32
@@ -147,68 +147,11 @@
                                         "column": 21
                                     }
                                 },
-                                "name": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        18,
-                                        19
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 7,
-                                            "line": 2
-                                        },
-                                        "end": {
-                                            "column": 8,
-                                            "line": 2
-                                        }
-                                    },
-                                    "name": "on",
-                                    "rawName": "@"
-                                },
-                                "argument": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        19,
-                                        24
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 8,
-                                            "line": 2
-                                        },
-                                        "end": {
-                                            "column": 13,
-                                            "line": 2
-                                        }
-                                    },
-                                    "name": "click",
-                                    "rawName": "click"
-                                },
-                                "modifiers": [
-                                    {
-                                        "type": "VIdentifier",
-                                        "range": [
-                                            25,
-                                            32
-                                        ],
-                                        "loc": {
-                                            "start": {
-                                                "column": 14,
-                                                "line": 2
-                                            },
-                                            "end": {
-                                                "column": 21,
-                                                "line": 2
-                                            }
-                                        },
-                                        "name": "prevent",
-                                        "rawName": "prevent"
-                                    }
-                                ]
+                                "name": "@click.prevent",
+                                "rawName": "@click.prevent"
                             },
                             "value": {
-                                "type": "VExpressionContainer",
+                                "type": "VLiteral",
                                 "range": [
                                     33,
                                     80
@@ -223,235 +166,7 @@
                                         "column": 69
                                     }
                                 },
-                                "expression": {
-                                    "type": "VOnExpression",
-                                    "range": [
-                                        34,
-                                        79
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "line": 2,
-                                            "column": 23
-                                        },
-                                        "end": {
-                                            "line": 2,
-                                            "column": 68
-                                        }
-                                    },
-                                    "body": [
-                                        {
-                                            "type": "ExpressionStatement",
-                                            "start": 34,
-                                            "end": 55,
-                                            "loc": {
-                                                "start": {
-                                                    "line": 2,
-                                                    "column": 23
-                                                },
-                                                "end": {
-                                                    "line": 2,
-                                                    "column": 44
-                                                }
-                                            },
-                                            "range": [
-                                                34,
-                                                55
-                                            ],
-                                            "expression": {
-                                                "type": "CallExpression",
-                                                "start": 34,
-                                                "end": 54,
-                                                "loc": {
-                                                    "start": {
-                                                        "line": 2,
-                                                        "column": 23
-                                                    },
-                                                    "end": {
-                                                        "line": 2,
-                                                        "column": 43
-                                                    }
-                                                },
-                                                "range": [
-                                                    34,
-                                                    54
-                                                ],
-                                                "callee": {
-                                                    "type": "Identifier",
-                                                    "start": 34,
-                                                    "end": 47,
-                                                    "loc": {
-                                                        "start": {
-                                                            "line": 2,
-                                                            "column": 23
-                                                        },
-                                                        "end": {
-                                                            "line": 2,
-                                                            "column": 36
-                                                        }
-                                                    },
-                                                    "range": [
-                                                        34,
-                                                        47
-                                                    ],
-                                                    "name": "setUploadType"
-                                                },
-                                                "arguments": [
-                                                    {
-                                                        "type": "Literal",
-                                                        "start": 48,
-                                                        "end": 53,
-                                                        "loc": {
-                                                            "start": {
-                                                                "line": 2,
-                                                                "column": 37
-                                                            },
-                                                            "end": {
-                                                                "line": 2,
-                                                                "column": 42
-                                                            }
-                                                        },
-                                                        "range": [
-                                                            48,
-                                                            53
-                                                        ],
-                                                        "value": "DIR",
-                                                        "raw": "'DIR'"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "ExpressionStatement",
-                                            "start": 56,
-                                            "end": 79,
-                                            "loc": {
-                                                "start": {
-                                                    "line": 2,
-                                                    "column": 45
-                                                },
-                                                "end": {
-                                                    "line": 2,
-                                                    "column": 68
-                                                }
-                                            },
-                                            "range": [
-                                                56,
-                                                79
-                                            ],
-                                            "expression": {
-                                                "type": "CallExpression",
-                                                "start": 56,
-                                                "end": 79,
-                                                "loc": {
-                                                    "start": {
-                                                        "line": 2,
-                                                        "column": 45
-                                                    },
-                                                    "end": {
-                                                        "line": 2,
-                                                        "column": 68
-                                                    }
-                                                },
-                                                "range": [
-                                                    56,
-                                                    79
-                                                ],
-                                                "callee": {
-                                                    "type": "Identifier",
-                                                    "start": 56,
-                                                    "end": 65,
-                                                    "loc": {
-                                                        "start": {
-                                                            "line": 2,
-                                                            "column": 45
-                                                        },
-                                                        "end": {
-                                                            "line": 2,
-                                                            "column": 54
-                                                        }
-                                                    },
-                                                    "range": [
-                                                        56,
-                                                        65
-                                                    ],
-                                                    "name": "showModal"
-                                                },
-                                                "arguments": [
-                                                    {
-                                                        "type": "Literal",
-                                                        "start": 66,
-                                                        "end": 78,
-                                                        "loc": {
-                                                            "start": {
-                                                                "line": 2,
-                                                                "column": 55
-                                                            },
-                                                            "end": {
-                                                                "line": 2,
-                                                                "column": 67
-                                                            }
-                                                        },
-                                                        "range": [
-                                                            66,
-                                                            78
-                                                        ],
-                                                        "value": "uploadFile",
-                                                        "raw": "'uploadFile'"
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                },
-                                "references": [
-                                    {
-                                        "id": {
-                                            "type": "Identifier",
-                                            "start": 34,
-                                            "end": 47,
-                                            "loc": {
-                                                "start": {
-                                                    "line": 2,
-                                                    "column": 23
-                                                },
-                                                "end": {
-                                                    "line": 2,
-                                                    "column": 36
-                                                }
-                                            },
-                                            "range": [
-                                                34,
-                                                47
-                                            ],
-                                            "name": "setUploadType"
-                                        },
-                                        "mode": "r"
-                                    },
-                                    {
-                                        "id": {
-                                            "type": "Identifier",
-                                            "start": 56,
-                                            "end": 65,
-                                            "loc": {
-                                                "start": {
-                                                    "line": 2,
-                                                    "column": 45
-                                                },
-                                                "end": {
-                                                    "line": 2,
-                                                    "column": 54
-                                                }
-                                            },
-                                            "range": [
-                                                56,
-                                                65
-                                            ],
-                                            "name": "showModal"
-                                        },
-                                        "mode": "r"
-                                    }
-                                ]
+                                "value": "setUploadType('DIR'); showModal('uploadFile')"
                             }
                         }
                     ]
@@ -793,76 +508,22 @@
                 "value": "a"
             },
             {
-                "type": "Punctuator",
+                "type": "HTMLIdentifier",
                 "range": [
                     18,
-                    19
-                ],
-                "loc": {
-                    "start": {
-                        "column": 7,
-                        "line": 2
-                    },
-                    "end": {
-                        "column": 8,
-                        "line": 2
-                    }
-                },
-                "value": "@"
-            },
-            {
-                "type": "HTMLIdentifier",
-                "range": [
-                    19,
-                    24
-                ],
-                "loc": {
-                    "start": {
-                        "column": 8,
-                        "line": 2
-                    },
-                    "end": {
-                        "column": 13,
-                        "line": 2
-                    }
-                },
-                "value": "click"
-            },
-            {
-                "type": "Punctuator",
-                "range": [
-                    24,
-                    25
-                ],
-                "loc": {
-                    "start": {
-                        "column": 13,
-                        "line": 2
-                    },
-                    "end": {
-                        "column": 14,
-                        "line": 2
-                    }
-                },
-                "value": "."
-            },
-            {
-                "type": "HTMLIdentifier",
-                "range": [
-                    25,
                     32
                 ],
                 "loc": {
                     "start": {
-                        "column": 14,
-                        "line": 2
+                        "line": 2,
+                        "column": 7
                     },
                     "end": {
-                        "column": 21,
-                        "line": 2
+                        "line": 2,
+                        "column": 21
                     }
                 },
-                "value": "prevent"
+                "value": "@click.prevent"
             },
             {
                 "type": "HTMLAssociation",
@@ -883,10 +544,10 @@
                 "value": ""
             },
             {
-                "type": "Punctuator",
+                "type": "HTMLLiteral",
                 "range": [
                     33,
-                    34
+                    80
                 ],
                 "loc": {
                     "start": {
@@ -895,208 +556,10 @@
                     },
                     "end": {
                         "line": 2,
-                        "column": 23
-                    }
-                },
-                "value": "\""
-            },
-            {
-                "type": "Identifier",
-                "value": "setUploadType",
-                "start": 34,
-                "end": 47,
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 23
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 36
-                    }
-                },
-                "range": [
-                    34,
-                    47
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "value": "(",
-                "start": 47,
-                "end": 48,
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 36
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 37
-                    }
-                },
-                "range": [
-                    47,
-                    48
-                ]
-            },
-            {
-                "type": "String",
-                "value": "'DIR'",
-                "start": 48,
-                "end": 53,
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 37
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 42
-                    }
-                },
-                "range": [
-                    48,
-                    53
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "value": ")",
-                "start": 53,
-                "end": 54,
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 42
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 43
-                    }
-                },
-                "range": [
-                    53,
-                    54
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "value": ";",
-                "start": 54,
-                "end": 55,
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 43
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 44
-                    }
-                },
-                "range": [
-                    54,
-                    55
-                ]
-            },
-            {
-                "type": "Identifier",
-                "value": "showModal",
-                "start": 56,
-                "end": 65,
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 45
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 54
-                    }
-                },
-                "range": [
-                    56,
-                    65
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "value": "(",
-                "start": 65,
-                "end": 66,
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 54
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 55
-                    }
-                },
-                "range": [
-                    65,
-                    66
-                ]
-            },
-            {
-                "type": "String",
-                "value": "'uploadFile'",
-                "start": 66,
-                "end": 78,
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 55
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 67
-                    }
-                },
-                "range": [
-                    66,
-                    78
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "value": ")",
-                "start": 78,
-                "end": 79,
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 67
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 68
-                    }
-                },
-                "range": [
-                    78,
-                    79
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "range": [
-                    79,
-                    80
-                ],
-                "loc": {
-                    "start": {
-                        "line": 2,
-                        "column": 68
-                    },
-                    "end": {
-                        "line": 2,
                         "column": 69
                     }
                 },
-                "value": "\""
+                "value": "setUploadType('DIR'); showModal('uploadFile')"
             },
             {
                 "type": "HTMLTagClose",

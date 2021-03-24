@@ -26,37 +26,14 @@
                                 "text": "v-for=\"a in list\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-for",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-for",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"a in list\"",
-                                        "children": [
-                                            {
-                                                "type": "VForExpression",
-                                                "text": "a in list",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "a",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "list",
-                                                        "children": []
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }
@@ -87,47 +64,14 @@
                                 "text": "v-for=\"(a, b, c) in list\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-for",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-for",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"(a, b, c) in list\"",
-                                        "children": [
-                                            {
-                                                "type": "VForExpression",
-                                                "text": "(a, b, c) in list",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "a",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "b",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "c",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "list",
-                                                        "children": []
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }
@@ -158,37 +102,14 @@
                                 "text": "v-for=\"a of list\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-for",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-for",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"a of list\"",
-                                        "children": [
-                                            {
-                                                "type": "VForExpression",
-                                                "text": "a of list",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "a",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "list",
-                                                        "children": []
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }
@@ -219,47 +140,14 @@
                                 "text": "v-for=\"(a, b, c) of list\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-for",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-for",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"(a, b, c) of list\"",
-                                        "children": [
-                                            {
-                                                "type": "VForExpression",
-                                                "text": "(a, b, c) of list",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "a",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "b",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "c",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "list",
-                                                        "children": []
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

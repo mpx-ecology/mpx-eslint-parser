@@ -37,36 +37,14 @@
                                 "text": "v-bind:AttrName.AbC=\"def\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-bind:AttrName.AbC",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-bind",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "AttrName",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "AbC",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"def\"",
-                                        "children": [
-                                            {
-                                                "type": "Identifier",
-                                                "text": "def",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

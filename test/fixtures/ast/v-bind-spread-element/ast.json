@@ -130,9 +130,9 @@
                                     "column": 19
                                 }
                             },
-                            "directive": true,
+                            "directive": false,
                             "key": {
-                                "type": "VDirectiveKey",
+                                "type": "VIdentifier",
                                 "range": [
                                     20,
                                     22
@@ -147,48 +147,11 @@
                                         "column": 11
                                     }
                                 },
-                                "name": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        20,
-                                        21
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 9,
-                                            "line": 2
-                                        },
-                                        "end": {
-                                            "column": 10,
-                                            "line": 2
-                                        }
-                                    },
-                                    "name": "bind",
-                                    "rawName": ":"
-                                },
-                                "argument": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        21,
-                                        22
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 10,
-                                            "line": 2
-                                        },
-                                        "end": {
-                                            "column": 11,
-                                            "line": 2
-                                        }
-                                    },
-                                    "name": "a",
-                                    "rawName": "a"
-                                },
-                                "modifiers": []
+                                "name": ":a",
+                                "rawName": ":a"
                             },
                             "value": {
-                                "type": "VExpressionContainer",
+                                "type": "VLiteral",
                                 "range": [
                                     23,
                                     30
@@ -203,8 +166,7 @@
                                         "column": 19
                                     }
                                 },
-                                "expression": null,
-                                "references": []
+                                "value": "...a1"
                             }
                         }
                     ]
@@ -340,40 +302,22 @@
                 "value": "div"
             },
             {
-                "type": "Punctuator",
-                "range": [
-                    20,
-                    21
-                ],
-                "loc": {
-                    "start": {
-                        "column": 9,
-                        "line": 2
-                    },
-                    "end": {
-                        "column": 10,
-                        "line": 2
-                    }
-                },
-                "value": ":"
-            },
-            {
                 "type": "HTMLIdentifier",
                 "range": [
-                    21,
+                    20,
                     22
                 ],
                 "loc": {
                     "start": {
-                        "column": 10,
-                        "line": 2
+                        "line": 2,
+                        "column": 9
                     },
                     "end": {
-                        "column": 11,
-                        "line": 2
+                        "line": 2,
+                        "column": 11
                     }
                 },
-                "value": "a"
+                "value": ":a"
             },
             {
                 "type": "HTMLAssociation",
@@ -539,13 +483,6 @@
             }
         ],
         "comments": [],
-        "errors": [
-            {
-                "message": "Unexpected token '...'.",
-                "index": 24,
-                "lineNumber": 2,
-                "column": 13
-            }
-        ]
+        "errors": []
     }
 }

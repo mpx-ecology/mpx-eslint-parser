@@ -26,42 +26,14 @@
                                 "text": "@click=\"foo[bar]\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "@click",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "@",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "click",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"foo[bar]\"",
-                                        "children": [
-                                            {
-                                                "type": "MemberExpression",
-                                                "text": "foo[bar]",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "foo",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "bar",
-                                                        "children": []
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

@@ -26,20 +26,9 @@
                                 "text": "v-a:b",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-a:b",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-a",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "b",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }
@@ -70,20 +59,9 @@
                                 "text": "v-a:b=",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-a:b",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-a",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "b",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }
@@ -114,31 +92,14 @@
                                 "text": "v-a:b=c",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-a:b",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-a",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "b",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "c",
-                                        "children": [
-                                            {
-                                                "type": "Identifier",
-                                                "text": "c",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

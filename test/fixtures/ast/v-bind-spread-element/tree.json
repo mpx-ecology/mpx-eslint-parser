@@ -26,23 +26,12 @@
                                 "text": ":a=\"...a1\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": ":a",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": ":",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "a",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"...a1\"",
                                         "children": []
                                     }

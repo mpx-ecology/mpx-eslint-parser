@@ -130,9 +130,9 @@
                                     "column": 19
                                 }
                             },
-                            "directive": true,
+                            "directive": false,
                             "key": {
-                                "type": "VDirectiveKey",
+                                "type": "VIdentifier",
                                 "range": [
                                     20,
                                     22
@@ -147,48 +147,11 @@
                                         "column": 11
                                     }
                                 },
-                                "name": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        20,
-                                        21
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 9,
-                                            "line": 2
-                                        },
-                                        "end": {
-                                            "column": 10,
-                                            "line": 2
-                                        }
-                                    },
-                                    "name": "bind",
-                                    "rawName": ":"
-                                },
-                                "argument": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        21,
-                                        22
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 10,
-                                            "line": 2
-                                        },
-                                        "end": {
-                                            "column": 11,
-                                            "line": 2
-                                        }
-                                    },
-                                    "name": "a",
-                                    "rawName": "a"
-                                },
-                                "modifiers": []
+                                "name": ":a",
+                                "rawName": ":a"
                             },
                             "value": {
-                                "type": "VExpressionContainer",
+                                "type": "VLiteral",
                                 "range": [
                                     23,
                                     30
@@ -203,8 +166,7 @@
                                         "column": 19
                                     }
                                 },
-                                "expression": null,
-                                "references": []
+                                "value": "a1,a2"
                             }
                         },
                         {
@@ -223,9 +185,9 @@
                                     "column": 21
                                 }
                             },
-                            "directive": true,
+                            "directive": false,
                             "key": {
-                                "type": "VDirectiveKey",
+                                "type": "VIdentifier",
                                 "range": [
                                     40,
                                     42
@@ -240,48 +202,11 @@
                                         "column": 11
                                     }
                                 },
-                                "name": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        40,
-                                        41
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 9,
-                                            "line": 3
-                                        },
-                                        "end": {
-                                            "column": 10,
-                                            "line": 3
-                                        }
-                                    },
-                                    "name": "bind",
-                                    "rawName": ":"
-                                },
-                                "argument": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        41,
-                                        42
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 10,
-                                            "line": 3
-                                        },
-                                        "end": {
-                                            "column": 11,
-                                            "line": 3
-                                        }
-                                    },
-                                    "name": "b",
-                                    "rawName": "b"
-                                },
-                                "modifiers": []
+                                "name": ":b",
+                                "rawName": ":b"
                             },
                             "value": {
-                                "type": "VExpressionContainer",
+                                "type": "VLiteral",
                                 "range": [
                                     43,
                                     52
@@ -296,115 +221,7 @@
                                         "column": 21
                                     }
                                 },
-                                "expression": {
-                                    "type": "SequenceExpression",
-                                    "start": 45,
-                                    "end": 50,
-                                    "loc": {
-                                        "start": {
-                                            "line": 3,
-                                            "column": 14
-                                        },
-                                        "end": {
-                                            "line": 3,
-                                            "column": 19
-                                        }
-                                    },
-                                    "range": [
-                                        45,
-                                        50
-                                    ],
-                                    "expressions": [
-                                        {
-                                            "type": "Identifier",
-                                            "start": 45,
-                                            "end": 47,
-                                            "loc": {
-                                                "start": {
-                                                    "line": 3,
-                                                    "column": 14
-                                                },
-                                                "end": {
-                                                    "line": 3,
-                                                    "column": 16
-                                                }
-                                            },
-                                            "range": [
-                                                45,
-                                                47
-                                            ],
-                                            "name": "b1"
-                                        },
-                                        {
-                                            "type": "Identifier",
-                                            "start": 48,
-                                            "end": 50,
-                                            "loc": {
-                                                "start": {
-                                                    "line": 3,
-                                                    "column": 17
-                                                },
-                                                "end": {
-                                                    "line": 3,
-                                                    "column": 19
-                                                }
-                                            },
-                                            "range": [
-                                                48,
-                                                50
-                                            ],
-                                            "name": "b2"
-                                        }
-                                    ]
-                                },
-                                "references": [
-                                    {
-                                        "id": {
-                                            "type": "Identifier",
-                                            "start": 45,
-                                            "end": 47,
-                                            "loc": {
-                                                "start": {
-                                                    "line": 3,
-                                                    "column": 14
-                                                },
-                                                "end": {
-                                                    "line": 3,
-                                                    "column": 16
-                                                }
-                                            },
-                                            "range": [
-                                                45,
-                                                47
-                                            ],
-                                            "name": "b1"
-                                        },
-                                        "mode": "r"
-                                    },
-                                    {
-                                        "id": {
-                                            "type": "Identifier",
-                                            "start": 48,
-                                            "end": 50,
-                                            "loc": {
-                                                "start": {
-                                                    "line": 3,
-                                                    "column": 17
-                                                },
-                                                "end": {
-                                                    "line": 3,
-                                                    "column": 19
-                                                }
-                                            },
-                                            "range": [
-                                                48,
-                                                50
-                                            ],
-                                            "name": "b2"
-                                        },
-                                        "mode": "r"
-                                    }
-                                ]
+                                "value": "(b1,b2)"
                             }
                         }
                     ]
@@ -540,40 +357,22 @@
                 "value": "div"
             },
             {
-                "type": "Punctuator",
-                "range": [
-                    20,
-                    21
-                ],
-                "loc": {
-                    "start": {
-                        "column": 9,
-                        "line": 2
-                    },
-                    "end": {
-                        "column": 10,
-                        "line": 2
-                    }
-                },
-                "value": ":"
-            },
-            {
                 "type": "HTMLIdentifier",
                 "range": [
-                    21,
+                    20,
                     22
                 ],
                 "loc": {
                     "start": {
-                        "column": 10,
-                        "line": 2
+                        "line": 2,
+                        "column": 9
                     },
                     "end": {
-                        "column": 11,
-                        "line": 2
+                        "line": 2,
+                        "column": 11
                     }
                 },
-                "value": "a"
+                "value": ":a"
             },
             {
                 "type": "HTMLAssociation",
@@ -612,40 +411,22 @@
                 "value": "a1,a2"
             },
             {
-                "type": "Punctuator",
-                "range": [
-                    40,
-                    41
-                ],
-                "loc": {
-                    "start": {
-                        "column": 9,
-                        "line": 3
-                    },
-                    "end": {
-                        "column": 10,
-                        "line": 3
-                    }
-                },
-                "value": ":"
-            },
-            {
                 "type": "HTMLIdentifier",
                 "range": [
-                    41,
+                    40,
                     42
                 ],
                 "loc": {
                     "start": {
-                        "column": 10,
-                        "line": 3
+                        "line": 3,
+                        "column": 9
                     },
                     "end": {
-                        "column": 11,
-                        "line": 3
+                        "line": 3,
+                        "column": 11
                     }
                 },
-                "value": "b"
+                "value": ":b"
             },
             {
                 "type": "HTMLAssociation",
@@ -666,10 +447,10 @@
                 "value": ""
             },
             {
-                "type": "Punctuator",
+                "type": "HTMLLiteral",
                 "range": [
                     43,
-                    44
+                    52
                 ],
                 "loc": {
                     "start": {
@@ -678,128 +459,10 @@
                     },
                     "end": {
                         "line": 3,
-                        "column": 13
-                    }
-                },
-                "value": "\""
-            },
-            {
-                "type": "Punctuator",
-                "value": "(",
-                "start": 44,
-                "end": 45,
-                "loc": {
-                    "start": {
-                        "line": 3,
-                        "column": 13
-                    },
-                    "end": {
-                        "line": 3,
-                        "column": 14
-                    }
-                },
-                "range": [
-                    44,
-                    45
-                ]
-            },
-            {
-                "type": "Identifier",
-                "value": "b1",
-                "start": 45,
-                "end": 47,
-                "loc": {
-                    "start": {
-                        "line": 3,
-                        "column": 14
-                    },
-                    "end": {
-                        "line": 3,
-                        "column": 16
-                    }
-                },
-                "range": [
-                    45,
-                    47
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "value": ",",
-                "start": 47,
-                "end": 48,
-                "loc": {
-                    "start": {
-                        "line": 3,
-                        "column": 16
-                    },
-                    "end": {
-                        "line": 3,
-                        "column": 17
-                    }
-                },
-                "range": [
-                    47,
-                    48
-                ]
-            },
-            {
-                "type": "Identifier",
-                "value": "b2",
-                "start": 48,
-                "end": 50,
-                "loc": {
-                    "start": {
-                        "line": 3,
-                        "column": 17
-                    },
-                    "end": {
-                        "line": 3,
-                        "column": 19
-                    }
-                },
-                "range": [
-                    48,
-                    50
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "value": ")",
-                "start": 50,
-                "end": 51,
-                "loc": {
-                    "start": {
-                        "line": 3,
-                        "column": 19
-                    },
-                    "end": {
-                        "line": 3,
-                        "column": 20
-                    }
-                },
-                "range": [
-                    50,
-                    51
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "range": [
-                    51,
-                    52
-                ],
-                "loc": {
-                    "start": {
-                        "line": 3,
-                        "column": 20
-                    },
-                    "end": {
-                        "line": 3,
                         "column": 21
                     }
                 },
-                "value": "\""
+                "value": "(b1,b2)"
             },
             {
                 "type": "HTMLTagClose",
@@ -929,13 +592,6 @@
             }
         ],
         "comments": [],
-        "errors": [
-            {
-                "message": "Unexpected token ','.",
-                "index": 26,
-                "lineNumber": 2,
-                "column": 15
-            }
-        ]
+        "errors": []
     }
 }

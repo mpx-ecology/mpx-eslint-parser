@@ -26,48 +26,14 @@
                                 "text": "@click=\"e => act()\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "@click",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "@",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "click",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"e => act()\"",
-                                        "children": [
-                                            {
-                                                "type": "ArrowFunctionExpression",
-                                                "text": "e => act()",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "e",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "CallExpression",
-                                                        "text": "act()",
-                                                        "children": [
-                                                            {
-                                                                "type": "Identifier",
-                                                                "text": "act",
-                                                                "children": []
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

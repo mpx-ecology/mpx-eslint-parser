@@ -167,9 +167,9 @@
                                     "column": 20
                                 }
                             },
-                            "directive": true,
+                            "directive": false,
                             "key": {
-                                "type": "VDirectiveKey",
+                                "type": "VIdentifier",
                                 "range": [
                                     33,
                                     38
@@ -184,30 +184,11 @@
                                         "column": 14
                                     }
                                 },
-                                "name": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        33,
-                                        38
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 9,
-                                            "line": 3
-                                        },
-                                        "end": {
-                                            "column": 14,
-                                            "line": 3
-                                        }
-                                    },
-                                    "name": "for",
-                                    "rawName": "for"
-                                },
-                                "argument": null,
-                                "modifiers": []
+                                "name": "v-for",
+                                "rawName": "v-for"
                             },
                             "value": {
-                                "type": "VExpressionContainer",
+                                "type": "VLiteral",
                                 "range": [
                                     39,
                                     44
@@ -222,8 +203,7 @@
                                         "column": 20
                                     }
                                 },
-                                "expression": null,
-                                "references": []
+                                "value": "abc"
                             }
                         }
                     ]
@@ -319,9 +299,9 @@
                                     "column": 24
                                 }
                             },
-                            "directive": true,
+                            "directive": false,
                             "key": {
-                                "type": "VDirectiveKey",
+                                "type": "VIdentifier",
                                 "range": [
                                     61,
                                     65
@@ -336,48 +316,11 @@
                                         "column": 13
                                     }
                                 },
-                                "name": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        61,
-                                        62
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 9,
-                                            "line": 4
-                                        },
-                                        "end": {
-                                            "column": 10,
-                                            "line": 4
-                                        }
-                                    },
-                                    "name": "bind",
-                                    "rawName": ":"
-                                },
-                                "argument": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        62,
-                                        65
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 10,
-                                            "line": 4
-                                        },
-                                        "end": {
-                                            "column": 13,
-                                            "line": 4
-                                        }
-                                    },
-                                    "name": "foo",
-                                    "rawName": "foo"
-                                },
-                                "modifiers": []
+                                "name": ":foo",
+                                "rawName": ":foo"
                             },
                             "value": {
-                                "type": "VExpressionContainer",
+                                "type": "VLiteral",
                                 "range": [
                                     66,
                                     76
@@ -392,8 +335,7 @@
                                         "column": 24
                                     }
                                 },
-                                "expression": null,
-                                "references": []
+                                "value": "abc + (1"
                             }
                         }
                     ]
@@ -489,9 +431,9 @@
                                     "column": 29
                                 }
                             },
-                            "directive": true,
+                            "directive": false,
                             "key": {
-                                "type": "VDirectiveKey",
+                                "type": "VIdentifier",
                                 "range": [
                                     93,
                                     99
@@ -506,48 +448,11 @@
                                         "column": 15
                                     }
                                 },
-                                "name": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        93,
-                                        94
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 9,
-                                            "line": 5
-                                        },
-                                        "end": {
-                                            "column": 10,
-                                            "line": 5
-                                        }
-                                    },
-                                    "name": "on",
-                                    "rawName": "@"
-                                },
-                                "argument": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        94,
-                                        99
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 10,
-                                            "line": 5
-                                        },
-                                        "end": {
-                                            "column": 15,
-                                            "line": 5
-                                        }
-                                    },
-                                    "name": "click",
-                                    "rawName": "click"
-                                },
-                                "modifiers": []
+                                "name": "@click",
+                                "rawName": "@click"
                             },
                             "value": {
-                                "type": "VExpressionContainer",
+                                "type": "VLiteral",
                                 "range": [
                                     100,
                                     113
@@ -562,8 +467,7 @@
                                         "column": 29
                                     }
                                 },
-                                "expression": null,
-                                "references": []
+                                "value": "abc('hello'"
                             }
                         }
                     ]
@@ -832,12 +736,12 @@
                 ],
                 "loc": {
                     "start": {
-                        "column": 9,
-                        "line": 3
+                        "line": 3,
+                        "column": 9
                     },
                     "end": {
-                        "column": 14,
-                        "line": 3
+                        "line": 3,
+                        "column": 14
                     }
                 },
                 "value": "v-for"
@@ -969,40 +873,22 @@
                 "value": "div"
             },
             {
-                "type": "Punctuator",
-                "range": [
-                    61,
-                    62
-                ],
-                "loc": {
-                    "start": {
-                        "column": 9,
-                        "line": 4
-                    },
-                    "end": {
-                        "column": 10,
-                        "line": 4
-                    }
-                },
-                "value": ":"
-            },
-            {
                 "type": "HTMLIdentifier",
                 "range": [
-                    62,
+                    61,
                     65
                 ],
                 "loc": {
                     "start": {
-                        "column": 10,
-                        "line": 4
+                        "line": 4,
+                        "column": 9
                     },
                     "end": {
-                        "column": 13,
-                        "line": 4
+                        "line": 4,
+                        "column": 13
                     }
                 },
-                "value": "foo"
+                "value": ":foo"
             },
             {
                 "type": "HTMLAssociation",
@@ -1131,40 +1017,22 @@
                 "value": "div"
             },
             {
-                "type": "Punctuator",
-                "range": [
-                    93,
-                    94
-                ],
-                "loc": {
-                    "start": {
-                        "column": 9,
-                        "line": 5
-                    },
-                    "end": {
-                        "column": 10,
-                        "line": 5
-                    }
-                },
-                "value": "@"
-            },
-            {
                 "type": "HTMLIdentifier",
                 "range": [
-                    94,
+                    93,
                     99
                 ],
                 "loc": {
                     "start": {
-                        "column": 10,
-                        "line": 5
+                        "line": 5,
+                        "column": 9
                     },
                     "end": {
-                        "column": 15,
-                        "line": 5
+                        "line": 5,
+                        "column": 15
                     }
                 },
-                "value": "click"
+                "value": "@click"
             },
             {
                 "type": "HTMLAssociation",
@@ -1336,24 +1204,6 @@
                 "index": 21,
                 "lineNumber": 2,
                 "column": 10
-            },
-            {
-                "message": "Unexpected end of expression.",
-                "index": 43,
-                "lineNumber": 3,
-                "column": 19
-            },
-            {
-                "message": "Unexpected end of expression.",
-                "index": 76,
-                "lineNumber": 4,
-                "column": 24
-            },
-            {
-                "message": "Unexpected end of expression.",
-                "index": 112,
-                "lineNumber": 5,
-                "column": 28
             }
         ]
     }

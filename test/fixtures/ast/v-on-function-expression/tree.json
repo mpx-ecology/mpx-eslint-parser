@@ -26,55 +26,14 @@
                                 "text": "@click=\"function() { act() }\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "@click",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "@",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "click",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"function() { act() }\"",
-                                        "children": [
-                                            {
-                                                "type": "FunctionExpression",
-                                                "text": "function() { act() }",
-                                                "children": [
-                                                    {
-                                                        "type": "BlockStatement",
-                                                        "text": "{ act() }",
-                                                        "children": [
-                                                            {
-                                                                "type": "ExpressionStatement",
-                                                                "text": "act()",
-                                                                "children": [
-                                                                    {
-                                                                        "type": "CallExpression",
-                                                                        "text": "act()",
-                                                                        "children": [
-                                                                            {
-                                                                                "type": "Identifier",
-                                                                                "text": "act",
-                                                                                "children": []
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

@@ -130,9 +130,9 @@
                                     "column": 17
                                 }
                             },
-                            "directive": true,
+                            "directive": false,
                             "key": {
-                                "type": "VDirectiveKey",
+                                "type": "VIdentifier",
                                 "range": [
                                     23,
                                     28
@@ -147,45 +147,8 @@
                                         "column": 17
                                     }
                                 },
-                                "name": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        23,
-                                        24
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 12,
-                                            "line": 2
-                                        },
-                                        "end": {
-                                            "column": 13,
-                                            "line": 2
-                                        }
-                                    },
-                                    "name": "bind",
-                                    "rawName": ":"
-                                },
-                                "argument": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        24,
-                                        28
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 13,
-                                            "line": 2
-                                        },
-                                        "end": {
-                                            "column": 17,
-                                            "line": 2
-                                        }
-                                    },
-                                    "name": "[obj",
-                                    "rawName": "[obj"
-                                },
-                                "modifiers": []
+                                "name": ":[obj",
+                                "rawName": ":[obj"
                             },
                             "value": null
                         }
@@ -272,50 +235,26 @@
                 "value": "button"
             },
             {
-                "type": "Punctuator",
-                "range": [
-                    23,
-                    24
-                ],
-                "loc": {
-                    "start": {
-                        "column": 12,
-                        "line": 2
-                    },
-                    "end": {
-                        "column": 13,
-                        "line": 2
-                    }
-                },
-                "value": ":"
-            },
-            {
                 "type": "HTMLIdentifier",
                 "range": [
-                    24,
+                    23,
                     28
                 ],
                 "loc": {
                     "start": {
-                        "column": 13,
-                        "line": 2
+                        "line": 2,
+                        "column": 12
                     },
                     "end": {
-                        "column": 17,
-                        "line": 2
+                        "line": 2,
+                        "column": 17
                     }
                 },
-                "value": "[obj"
+                "value": ":[obj"
             }
         ],
         "comments": [],
         "errors": [
-            {
-                "message": "Dynamic argument cannot contain the 'EOF' character.",
-                "index": 28,
-                "lineNumber": 2,
-                "column": 17
-            },
             {
                 "message": "eof-in-tag",
                 "index": 28,

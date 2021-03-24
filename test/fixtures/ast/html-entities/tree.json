@@ -26,37 +26,14 @@
                                 "text": "v-if=\"a &amp;&amp; b\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-if",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-if",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"a &amp;&amp; b\"",
-                                        "children": [
-                                            {
-                                                "type": "LogicalExpression",
-                                                "text": "a &amp;&amp; b",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "a",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "b",
-                                                        "children": []
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

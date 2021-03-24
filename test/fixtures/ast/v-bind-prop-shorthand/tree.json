@@ -26,36 +26,14 @@
                                 "text": ".a=\"foo\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": ".a",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": ".",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "a",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"foo\"",
-                                        "children": [
-                                            {
-                                                "type": "Identifier",
-                                                "text": "foo",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }
@@ -86,36 +64,14 @@
                                 "text": ".a.prop=\"foo\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": ".a.prop",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": ".",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "a",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "prop",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"foo\"",
-                                        "children": [
-                                            {
-                                                "type": "Identifier",
-                                                "text": "foo",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

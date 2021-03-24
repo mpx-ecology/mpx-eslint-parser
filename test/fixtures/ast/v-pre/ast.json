@@ -265,9 +265,9 @@
                                     "column": 24
                                 }
                             },
-                            "directive": true,
+                            "directive": false,
                             "key": {
-                                "type": "VDirectiveKey",
+                                "type": "VIdentifier",
                                 "range": [
                                     40,
                                     45
@@ -282,27 +282,8 @@
                                         "column": 24
                                     }
                                 },
-                                "name": {
-                                    "type": "VIdentifier",
-                                    "range": [
-                                        40,
-                                        45
-                                    ],
-                                    "loc": {
-                                        "start": {
-                                            "column": 19,
-                                            "line": 3
-                                        },
-                                        "end": {
-                                            "column": 24,
-                                            "line": 3
-                                        }
-                                    },
-                                    "name": "pre",
-                                    "rawName": "pre"
-                                },
-                                "argument": null,
-                                "modifiers": []
+                                "name": "v-pre",
+                                "rawName": "v-pre"
                             },
                             "value": null
                         }
@@ -824,12 +805,12 @@
                 ],
                 "loc": {
                     "start": {
-                        "column": 19,
-                        "line": 3
+                        "line": 3,
+                        "column": 19
                     },
                     "end": {
-                        "column": 24,
-                        "line": 3
+                        "line": 3,
+                        "column": 24
                     }
                 },
                 "value": "v-pre"

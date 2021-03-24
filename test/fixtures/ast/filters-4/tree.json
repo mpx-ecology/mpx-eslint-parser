@@ -26,48 +26,14 @@
                                 "text": ":attr=\"\n        value\n            | filter\n    \"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": ":attr",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": ":",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "attr",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"\n        value\n            | filter\n    \"",
-                                        "children": [
-                                            {
-                                                "type": "VFilterSequenceExpression",
-                                                "text": "value\n            | filter",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "value",
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "type": "VFilter",
-                                                        "text": "filter",
-                                                        "children": [
-                                                            {
-                                                                "type": "Identifier",
-                                                                "text": "filter",
-                                                                "children": []
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

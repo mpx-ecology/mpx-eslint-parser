@@ -26,49 +26,14 @@
                                 "text": "v-slot=\"{ foo }\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-slot",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-slot",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"{ foo }\"",
-                                        "children": [
-                                            {
-                                                "type": "VSlotScopeExpression",
-                                                "text": "{ foo }",
-                                                "children": [
-                                                    {
-                                                        "type": "ObjectPattern",
-                                                        "text": "{ foo }",
-                                                        "children": [
-                                                            {
-                                                                "type": "Property",
-                                                                "text": "foo",
-                                                                "children": [
-                                                                    {
-                                                                        "type": "Identifier",
-                                                                        "text": "foo",
-                                                                        "children": []
-                                                                    },
-                                                                    {
-                                                                        "type": "Identifier",
-                                                                        "text": "foo",
-                                                                        "children": []
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

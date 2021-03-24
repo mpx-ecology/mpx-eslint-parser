@@ -187,9 +187,9 @@
                                             "column": 41
                                         }
                                     },
-                                    "directive": true,
+                                    "directive": false,
                                     "key": {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "range": [
                                             50,
                                             63
@@ -204,48 +204,11 @@
                                                 "column": 31
                                             }
                                         },
-                                        "name": {
-                                            "type": "VIdentifier",
-                                            "range": [
-                                                50,
-                                                56
-                                            ],
-                                            "loc": {
-                                                "start": {
-                                                    "column": 18,
-                                                    "line": 3
-                                                },
-                                                "end": {
-                                                    "column": 24,
-                                                    "line": 3
-                                                }
-                                            },
-                                            "name": "slot",
-                                            "rawName": "slot"
-                                        },
-                                        "argument": {
-                                            "type": "VIdentifier",
-                                            "range": [
-                                                57,
-                                                63
-                                            ],
-                                            "loc": {
-                                                "start": {
-                                                    "column": 25,
-                                                    "line": 3
-                                                },
-                                                "end": {
-                                                    "column": 31,
-                                                    "line": 3
-                                                }
-                                            },
-                                            "name": "header",
-                                            "rawName": "header"
-                                        },
-                                        "modifiers": []
+                                        "name": "v-slot:header",
+                                        "rawName": "v-slot:header"
                                     },
                                     "value": {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "range": [
                                             64,
                                             73
@@ -260,110 +223,7 @@
                                                 "column": 41
                                             }
                                         },
-                                        "expression": {
-                                            "type": "VSlotScopeExpression",
-                                            "range": [
-                                                65,
-                                                72
-                                            ],
-                                            "loc": {
-                                                "start": {
-                                                    "line": 3,
-                                                    "column": 33
-                                                },
-                                                "end": {
-                                                    "line": 3,
-                                                    "column": 40
-                                                }
-                                            },
-                                            "params": [
-                                                {
-                                                    "type": "ObjectPattern",
-                                                    "start": 65,
-                                                    "end": 72,
-                                                    "loc": {
-                                                        "start": {
-                                                            "line": 3,
-                                                            "column": 33
-                                                        },
-                                                        "end": {
-                                                            "line": 3,
-                                                            "column": 40
-                                                        }
-                                                    },
-                                                    "range": [
-                                                        65,
-                                                        72
-                                                    ],
-                                                    "properties": [
-                                                        {
-                                                            "type": "Property",
-                                                            "start": 67,
-                                                            "end": 70,
-                                                            "loc": {
-                                                                "start": {
-                                                                    "line": 3,
-                                                                    "column": 35
-                                                                },
-                                                                "end": {
-                                                                    "line": 3,
-                                                                    "column": 38
-                                                                }
-                                                            },
-                                                            "range": [
-                                                                67,
-                                                                70
-                                                            ],
-                                                            "method": false,
-                                                            "shorthand": true,
-                                                            "computed": false,
-                                                            "key": {
-                                                                "type": "Identifier",
-                                                                "start": 67,
-                                                                "end": 70,
-                                                                "loc": {
-                                                                    "start": {
-                                                                        "line": 3,
-                                                                        "column": 35
-                                                                    },
-                                                                    "end": {
-                                                                        "line": 3,
-                                                                        "column": 38
-                                                                    }
-                                                                },
-                                                                "range": [
-                                                                    67,
-                                                                    70
-                                                                ],
-                                                                "name": "foo"
-                                                            },
-                                                            "kind": "init",
-                                                            "value": {
-                                                                "type": "Identifier",
-                                                                "start": 67,
-                                                                "end": 70,
-                                                                "loc": {
-                                                                    "start": {
-                                                                        "line": 3,
-                                                                        "column": 35
-                                                                    },
-                                                                    "end": {
-                                                                        "line": 3,
-                                                                        "column": 38
-                                                                    }
-                                                                },
-                                                                "range": [
-                                                                    67,
-                                                                    70
-                                                                ],
-                                                                "name": "foo"
-                                                            }
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        "references": []
+                                        "value": "{ foo }"
                                     }
                                 }
                             ]
@@ -485,31 +345,7 @@
                                 }
                             }
                         },
-                        "variables": [
-                            {
-                                "id": {
-                                    "type": "Identifier",
-                                    "start": 67,
-                                    "end": 70,
-                                    "loc": {
-                                        "start": {
-                                            "line": 3,
-                                            "column": 35
-                                        },
-                                        "end": {
-                                            "line": 3,
-                                            "column": 38
-                                        }
-                                    },
-                                    "range": [
-                                        67,
-                                        70
-                                    ],
-                                    "name": "foo"
-                                },
-                                "kind": "scope"
-                            }
-                        ]
+                        "variables": []
                     },
                     {
                         "type": "VText",
@@ -717,55 +553,19 @@
                 "type": "HTMLIdentifier",
                 "range": [
                     50,
-                    56
-                ],
-                "loc": {
-                    "start": {
-                        "column": 18,
-                        "line": 3
-                    },
-                    "end": {
-                        "column": 24,
-                        "line": 3
-                    }
-                },
-                "value": "v-slot"
-            },
-            {
-                "type": "Punctuator",
-                "range": [
-                    56,
-                    57
-                ],
-                "loc": {
-                    "start": {
-                        "column": 24,
-                        "line": 3
-                    },
-                    "end": {
-                        "column": 25,
-                        "line": 3
-                    }
-                },
-                "value": ":"
-            },
-            {
-                "type": "HTMLIdentifier",
-                "range": [
-                    57,
                     63
                 ],
                 "loc": {
                     "start": {
-                        "column": 25,
-                        "line": 3
+                        "line": 3,
+                        "column": 18
                     },
                     "end": {
-                        "column": 31,
-                        "line": 3
+                        "line": 3,
+                        "column": 31
                     }
                 },
-                "value": "header"
+                "value": "v-slot:header"
             },
             {
                 "type": "HTMLAssociation",
@@ -786,10 +586,10 @@
                 "value": ""
             },
             {
-                "type": "Punctuator",
+                "type": "HTMLLiteral",
                 "range": [
                     64,
-                    65
+                    73
                 ],
                 "loc": {
                     "start": {
@@ -798,88 +598,10 @@
                     },
                     "end": {
                         "line": 3,
-                        "column": 33
-                    }
-                },
-                "value": "\""
-            },
-            {
-                "type": "Punctuator",
-                "value": "{",
-                "start": 65,
-                "end": 66,
-                "loc": {
-                    "start": {
-                        "line": 3,
-                        "column": 33
-                    },
-                    "end": {
-                        "line": 3,
-                        "column": 34
-                    }
-                },
-                "range": [
-                    65,
-                    66
-                ]
-            },
-            {
-                "type": "Identifier",
-                "value": "foo",
-                "start": 67,
-                "end": 70,
-                "loc": {
-                    "start": {
-                        "line": 3,
-                        "column": 35
-                    },
-                    "end": {
-                        "line": 3,
-                        "column": 38
-                    }
-                },
-                "range": [
-                    67,
-                    70
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "value": "}",
-                "start": 71,
-                "end": 72,
-                "loc": {
-                    "start": {
-                        "line": 3,
-                        "column": 39
-                    },
-                    "end": {
-                        "line": 3,
-                        "column": 40
-                    }
-                },
-                "range": [
-                    71,
-                    72
-                ]
-            },
-            {
-                "type": "Punctuator",
-                "range": [
-                    72,
-                    73
-                ],
-                "loc": {
-                    "start": {
-                        "line": 3,
-                        "column": 40
-                    },
-                    "end": {
-                        "line": 3,
                         "column": 41
                     }
                 },
-                "value": "\""
+                "value": "{ foo }"
             },
             {
                 "type": "HTMLTagClose",

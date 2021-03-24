@@ -26,48 +26,14 @@
                                 "text": ":[obj.prop]=\"foo\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": ":[obj.prop]",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": ":",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VExpressionContainer",
-                                                "text": "[obj.prop]",
-                                                "children": [
-                                                    {
-                                                        "type": "MemberExpression",
-                                                        "text": "obj.prop",
-                                                        "children": [
-                                                            {
-                                                                "type": "Identifier",
-                                                                "text": "obj",
-                                                                "children": []
-                                                            },
-                                                            {
-                                                                "type": "Identifier",
-                                                                "text": "prop",
-                                                                "children": []
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"foo\"",
-                                        "children": [
-                                            {
-                                                "type": "Identifier",
-                                                "text": "foo",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

@@ -26,37 +26,14 @@
                                 "text": "v-on:[key]=\"foo\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-on:[key]",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-on",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VExpressionContainer",
-                                                "text": "[key]",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "key",
-                                                        "children": []
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"foo\"",
-                                        "children": [
-                                            {
-                                                "type": "Identifier",
-                                                "text": "foo",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }
@@ -87,37 +64,14 @@
                                 "text": "@[key]=\"foo\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "@[key]",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "@",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VExpressionContainer",
-                                                "text": "[key]",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "key",
-                                                        "children": []
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"foo\"",
-                                        "children": [
-                                            {
-                                                "type": "Identifier",
-                                                "text": "foo",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }
@@ -148,42 +102,14 @@
                                 "text": "@[key].enter=\"foo\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "@[key].enter",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "@",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VExpressionContainer",
-                                                "text": "[key]",
-                                                "children": [
-                                                    {
-                                                        "type": "Identifier",
-                                                        "text": "key",
-                                                        "children": []
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "enter",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"foo\"",
-                                        "children": [
-                                            {
-                                                "type": "Identifier",
-                                                "text": "foo",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

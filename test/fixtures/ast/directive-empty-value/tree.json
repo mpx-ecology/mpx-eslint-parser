@@ -26,23 +26,12 @@
                                 "text": "v-on:a=\"\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-on:a",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-on",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "a",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"\"",
                                         "children": []
                                     }
@@ -75,23 +64,12 @@
                                 "text": "v-on:a=''",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-on:a",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-on",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "a",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "''",
                                         "children": []
                                     }
@@ -124,23 +102,12 @@
                                 "text": "v-bind:a=\"\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-bind:a",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-bind",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "a",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"\"",
                                         "children": []
                                     }
@@ -173,23 +140,12 @@
                                 "text": "v-bind:a=''",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-bind:a",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-bind",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "a",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "''",
                                         "children": []
                                     }
@@ -222,18 +178,12 @@
                                 "text": "v-for=\"\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-for",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-for",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"\"",
                                         "children": []
                                     }
@@ -266,18 +216,12 @@
                                 "text": "v-for=''",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-for",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-for",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "''",
                                         "children": []
                                     }

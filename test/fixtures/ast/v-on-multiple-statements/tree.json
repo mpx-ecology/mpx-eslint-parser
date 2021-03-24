@@ -26,81 +26,14 @@
                                 "text": "@click.prevent=\"setUploadType('DIR'); showModal('uploadFile')\"",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "@click.prevent",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "@",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "click",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "prevent",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     },
                                     {
-                                        "type": "VExpressionContainer",
+                                        "type": "VLiteral",
                                         "text": "\"setUploadType('DIR'); showModal('uploadFile')\"",
-                                        "children": [
-                                            {
-                                                "type": "VOnExpression",
-                                                "text": "setUploadType('DIR'); showModal('uploadFile')",
-                                                "children": [
-                                                    {
-                                                        "type": "ExpressionStatement",
-                                                        "text": "setUploadType('DIR');",
-                                                        "children": [
-                                                            {
-                                                                "type": "CallExpression",
-                                                                "text": "setUploadType('DIR')",
-                                                                "children": [
-                                                                    {
-                                                                        "type": "Identifier",
-                                                                        "text": "setUploadType",
-                                                                        "children": []
-                                                                    },
-                                                                    {
-                                                                        "type": "Literal",
-                                                                        "text": "'DIR'",
-                                                                        "children": []
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    },
-                                                    {
-                                                        "type": "ExpressionStatement",
-                                                        "text": "showModal('uploadFile')",
-                                                        "children": [
-                                                            {
-                                                                "type": "CallExpression",
-                                                                "text": "showModal('uploadFile')",
-                                                                "children": [
-                                                                    {
-                                                                        "type": "Identifier",
-                                                                        "text": "showModal",
-                                                                        "children": []
-                                                                    },
-                                                                    {
-                                                                        "type": "Literal",
-                                                                        "text": "'uploadFile'",
-                                                                        "children": []
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

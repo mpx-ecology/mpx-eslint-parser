@@ -58,15 +58,9 @@
                                 "text": "v-pre",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-pre",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-pre",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }

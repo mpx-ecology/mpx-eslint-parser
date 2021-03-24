@@ -26,20 +26,9 @@
                                 "text": "v-.a",
                                 "children": [
                                     {
-                                        "type": "VDirectiveKey",
+                                        "type": "VIdentifier",
                                         "text": "v-.a",
-                                        "children": [
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "v-",
-                                                "children": []
-                                            },
-                                            {
-                                                "type": "VIdentifier",
-                                                "text": "a",
-                                                "children": []
-                                            }
-                                        ]
+                                        "children": []
                                     }
                                 ]
                             }
