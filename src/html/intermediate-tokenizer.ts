@@ -17,6 +17,7 @@ import { debug } from "../common/debug"
 import { Tokenizer, TokenizerState, TokenType } from "./tokenizer"
 
 const DUMMY_PARENT: any = Object.freeze({})
+const GET_IN_VALUE = /^{{|}}$/gu
 
 /**
  * Concatenate token values.
@@ -407,7 +408,7 @@ export class IntermediateTokenizer {
                 range: [token.range[0], token.range[1]],
                 loc: { start: token.loc.start, end: token.loc.end },
                 parent: this.attribute,
-                value: token.value,
+                value: token.value.replace(GET_IN_VALUE, ""),
             }
 
             if (
