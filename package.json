@@ -1,5 +1,5 @@
 {
-  "name": "mpx-eslint-parser",
+  "name": "@mpxjs/mpx-eslint-parser",
   "version": "0.0.5",
   "description": "The ESLint custom parser for `.mpx` files.",
   "engines": {
@@ -77,13 +77,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pagnkelly/mpx-eslint-parser.git"
+    "url": "git+https://github.com/mpx-ecology/mpx-eslint-parser.git"
   },
   "keywords": [],
   "author": "pagnkelly",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pagnkelly/mpx-eslint-parser/issues"
+    "url": "https://github.com/mpx-ecology/mpx-eslint-parser/issues"
   },
-  "homepage": "https://github.com/pagnkelly/mpx-eslint-parser#readme"
+  "homepage": "https://github.com/mpx-ecology/mpx-eslint-parser#readme",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  }
 }
