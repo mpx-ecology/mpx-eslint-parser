@@ -37,7 +37,24 @@ function isTemplateElement(node: AST.VNode): node is AST.VElement {
  * @param node The node to check.
  * @returns `true` if the node is a `<script>` element.
  */
-function isScriptElement(node: AST.VNode): node is AST.VElement {
+
+function isScriptElement(node: any): node is AST.VElement {
+    if (node && node.startTag && node.startTag.attributes) {
+        const type = node.startTag.attributes.find(
+            (attribute: AST.VAttribute) =>
+                attribute.directive === false && attribute.key.name === "type",
+        )
+        const name = node.startTag.attributes.find(
+            (attribute: AST.VAttribute) =>
+                attribute.directive === false && attribute.key.name === "name",
+        )
+        if (
+            (name && name.value && name.value.value) === "json" ||
+            (type && type.value && type.value.value) === "application/json"
+        ) {
+            return false
+        }
+    }
     return node.type === "VElement" && node.name === "script"
 }
 
