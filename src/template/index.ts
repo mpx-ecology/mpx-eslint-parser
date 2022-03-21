@@ -526,9 +526,16 @@ function parseAttributeValue(
     | VSlotScopeExpression
 > {
     const firstChar = code[node.range[0]]
+    const secondChar = code[node.range[0] + 1] || ""
+    const thirdChar = code[node.range[0] + 2] || ""
     const quoted = firstChar === '"' || firstChar === "'"
+    const curlyBraces1 = secondChar === "{"
+    const curlyBraces2 = thirdChar === "{"
+    const charlen = [quoted, curlyBraces1, curlyBraces2].filter(item => item)
+        .length
+    const value = node.value.replace(/^\{\{|\}\}$/gu, "")
     const locationCalculator = globalLocationCalculator.getSubCalculatorAfter(
-        node.range[0] + (quoted ? 1 : 0),
+        node.range[0] + charlen,
     )
     const directiveName = directiveKey.name.name
 
@@ -539,7 +546,7 @@ function parseAttributeValue(
         | VOnExpression
         | VSlotScopeExpression
     >
-    if (quoted && node.value === "") {
+    if (quoted && value === "") {
         result = {
             expression: null,
             tokens: [],
@@ -548,55 +555,50 @@ function parseAttributeValue(
             references: [],
         }
     } else if (directiveName === "for") {
-        result = parseVForExpression(
-            node.value,
-            locationCalculator,
-            parserOptions,
-        )
+        result = parseVForExpression(value, locationCalculator, parserOptions)
     } else if (directiveName === "on" && directiveKey.argument != null) {
-        result = parseVOnExpression(
-            node.value,
-            locationCalculator,
-            parserOptions,
-        )
+        result = parseVOnExpression(value, locationCalculator, parserOptions)
     } else if (
         directiveName === "slot" ||
         directiveName === "slot-scope" ||
         (tagName === "template" && directiveName === "scope")
     ) {
         result = parseSlotScopeExpression(
-            node.value,
+            value,
             locationCalculator,
             parserOptions,
         )
     } else if (directiveName === "bind") {
-        result = parseExpression(
-            node.value,
-            locationCalculator,
-            parserOptions,
-            { allowFilters: true },
-        )
+        result = parseExpression(value, locationCalculator, parserOptions, {
+            allowFilters: true,
+        })
     } else {
-        result = parseExpression(node.value, locationCalculator, parserOptions)
+        result = parseExpression(value, locationCalculator, parserOptions)
     }
 
-    // Add the tokens of quotes.
     if (quoted) {
+        const punctuator = [
+            { flag: quoted, value: firstChar },
+            { flag: curlyBraces1, value: secondChar },
+            { flag: curlyBraces2, value: thirdChar },
+        ]
+            .filter(item => item.flag)
+            .join("")
         result.tokens.unshift(
             createSimpleToken(
                 "Punctuator",
                 node.range[0],
-                node.range[0] + 1,
-                firstChar,
+                node.range[0] + charlen,
+                punctuator,
                 globalLocationCalculator,
             ),
         )
         result.tokens.push(
             createSimpleToken(
                 "Punctuator",
-                node.range[1] - 1,
+                node.range[1] - charlen,
                 node.range[1],
-                firstChar,
+                punctuator,
                 globalLocationCalculator,
             ),
         )
