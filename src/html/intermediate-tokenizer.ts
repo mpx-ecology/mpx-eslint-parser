@@ -407,7 +407,7 @@ export class IntermediateTokenizer {
                 range: [token.range[0], token.range[1]],
                 loc: { start: token.loc.start, end: token.loc.end },
                 parent: this.attribute,
-                value: token.value
+                value: token.value,
             }
 
             if (
