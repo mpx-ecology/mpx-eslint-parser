@@ -3,7 +3,6 @@
  * @copyright 2017 Toru Nagashima. All rights reserved.
  * See LICENSE file in root directory for full license.
  */
-import { last } from "lodash"
 import sortedIndexBy from "lodash/sortedIndexBy"
 import sortedLastIndexBy from "lodash/sortedLastIndexBy"
 import {
