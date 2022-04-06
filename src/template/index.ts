@@ -3,6 +3,7 @@
  * @copyright 2017 Toru Nagashima. All rights reserved.
  * See LICENSE file in root directory for full license.
  */
+import { last } from "lodash"
 import sortedIndexBy from "lodash/sortedIndexBy"
 import sortedLastIndexBy from "lodash/sortedLastIndexBy"
 import {
@@ -575,36 +576,76 @@ function parseAttributeValue(
     } else {
         result = parseExpression(value, locationCalculator, parserOptions)
     }
-
     if (quoted) {
-        const punctuator = [
-            { flag: quoted, value: firstChar },
-            { flag: curlyBraces1, value: secondChar },
-            { flag: curlyBraces2, value: thirdChar },
-        ]
-            .filter(item => item.flag)
-            .join("")
+        handelTokenResult(result, code, node, globalLocationCalculator)
+    }
+
+    return result
+}
+
+/**
+ * 处理"{}
+ */
+function handelTokenResult(
+    result: ExpressionParseResult<
+        | ESLintExpression
+        | VFilterSequenceExpression
+        | VForExpression
+        | VOnExpression
+        | VSlotScopeExpression
+    >,
+    code: string,
+    node: VLiteral,
+    globalLocationCalculator: LocationCalculator,
+) {
+    const curlyBraces = code.slice(node.range[0] + 1, node.range[0] + 3)
+    if (curlyBraces === "{{") {
         result.tokens.unshift(
             createSimpleToken(
                 "Punctuator",
-                node.range[0],
-                node.range[0] + charlen,
-                punctuator,
-                globalLocationCalculator,
-            ),
-        )
-        result.tokens.push(
-            createSimpleToken(
-                "Punctuator",
-                node.range[1] - charlen,
-                node.range[1],
-                punctuator,
+                node.range[0] + 1,
+                node.range[0] + 3,
+                curlyBraces,
                 globalLocationCalculator,
             ),
         )
     }
 
-    return result
+    const firstChar = code[node.range[0]]
+    result.tokens.unshift(
+        createSimpleToken(
+            "Punctuator",
+            node.range[0],
+            node.range[0] + 1,
+            firstChar,
+            globalLocationCalculator,
+        ),
+    )
+
+    const lastCurlyBraces = code.slice(node.range[1] - 3, node.range[1] - 1)
+    if (lastCurlyBraces === "}}") {
+        result.tokens.push(
+            createSimpleToken(
+                "Punctuator",
+                node.range[1] - 3,
+                node.range[1] - 1,
+                lastCurlyBraces,
+                globalLocationCalculator,
+            ),
+        )
+    }
+    const lastChar = code[node.range[1] - 1]
+    if (lastChar === '"' || lastChar === "'") {
+        result.tokens.push(
+            createSimpleToken(
+                "Punctuator",
+                node.range[1] - 1,
+                node.range[1],
+                lastChar,
+                globalLocationCalculator,
+            ),
+        )
+    }
 }
 
 /**
