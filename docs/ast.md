@@ -13,7 +13,7 @@ Some types are featured from [ESTree].
 You can use the type definition of this AST:
 
 ```ts
-import { AST } from "vue-eslint-parser"
+import { AST } from "mpx-eslint-parser"
 
 export function create(context) {
     return context.parserServices.defineTemplateBodyVisitor(
