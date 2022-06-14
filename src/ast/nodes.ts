@@ -649,7 +649,7 @@ export type Namespace =
  */
 export interface Variable {
     id: ESLintIdentifier
-    kind: "v-for" | "scope"
+    kind: "wx:for" | "scope"
     references: Reference[]
 }
 

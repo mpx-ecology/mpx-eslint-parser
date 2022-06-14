@@ -114,13 +114,10 @@ interface VDirectiveKey <: Node {
 }
 ```
 
-- The `name` property doesn't have `v-` prefix. It's dropped.
-- The `argument` property is a `VExpressionContainer` node if it's a [dynamic argument].
-- In the shorthand of `v-bind` case, the `name.name` property is `"bind"` and the `name.rawName` property is `":"`.
-- In the shorthand of `v-bind` with `.prop` modifier case, the `name.name` property is `"bind"` and the `name.rawName` property is `"."` and the `modifiers` property includes a `VIdentifier` node of `"prop"`.
-- In the shorthand of `v-on` case, the `name.name` property is `"on"` and the `name.rawName` property is `@`.
-- In the shorthand of `v-slot` case, the `name.name` property is `"slot"` and the `name.rawName` property is `#`.
-- Otherwise, `shorthand` property is always `false`.
+- `name` 属性没有 `wx:` 前缀。 去掉了。
+- `argument` 属性是一个 `VExpressionContainer` 节点，如果它是一个 [动态参数]。
+- 在 `bind:tap` 的简写中，`name.name` 属性是 `"bind"`，而 `name.rawName` 属性是 `":"`。(还未支持)
+- 否则，`shorthand` 属性始终为 `false`。
 
 ## VLiteral
 
@@ -131,8 +128,8 @@ interface VLiteral <: Node {
 }
 ```
 
-- This is similar to [Literal] nodes but this is not always quoted.
-- HTML entities in the `value` property are decoded.
+- 这类似于 [Literal] 节点，但并不总是被引用。
+- `value` 属性中的 HTML 实体被解码。
 
 ## VAttribute
 
@@ -152,8 +149,7 @@ interface VDirective <: Node {
 }
 ```
 
-- If their attribute value does not exist, the `value` property is `null`.
-- The `slot-scope` attribute becomes `directive:true` specially.
+- 如果它们的属性值不存在，则 `value` 属性为 `null`。
 
 ## VStartTag
 
@@ -187,13 +183,13 @@ interface VElement <: Node {
 
 interface Variable {
     id: Identifier
-    kind: "v-for" | "scope"
+    kind: "wx:for" | "scope"
     references: [ Reference ]
 }
 ```
 
-- `Variable` is objects but not `Node`. Those are variable declarations that child elements can use. The elements which have [`v-for` directives] or a special attribute [scope] can declare variables.
-- `Variable#references` is an array of references which use this variable.
+- `Variable` 是对象，但不是 `Node`。 这些是子元素可以使用的变量声明。 具有 [`wx:for` 指令] 或特殊属性 [范围] 的元素可以声明变量。(还未支持)
+- `Variable#references` 是使用此变量的引用数组。
 
 ## VRootElement
 
@@ -226,8 +222,8 @@ extend interface Program {
 }
 ```
 
-This spec enhances [Program] nodes as it has the root node of `<template>`.
-This supports only HTML for now. However, I'm going to add other languages Vue.js supports. The AST of other languages may be different form to VElement.
+该规范增强了 [Program] 节点，因为它具有 `<template>` 的根节点。
+目前仅支持 HTML。 其他语言的 AST 可能与 VElement 的形式不同。
 
 [ESTree]: https://github.com/estree/estree
 [Program]: https://github.com/estree/estree/blob/master/es5.md#programs
@@ -241,9 +237,3 @@ This supports only HTML for now. However, I'm going to add other languages Vue.j
 [ForInStatement]: https://github.com/estree/estree/blob/master/es5.md#forinstatement
 [VariableDeclarator]: https://github.com/estree/estree/blob/master/es5.md#variabledeclarator
 
-[`v-for` directives]: https://vuejs.org/v2/api/#v-for
-[`v-on` directives]: https://vuejs.org/v2/api/#v-on
-[`v-slot` directives]: https://vuejs.org/v2/api/#v-slot
-[scope]: https://vuejs.org/v2/guide/components.html#Scoped-Slots
-[`slot-scope` attributes]: https://vuejs.org/v2/guide/components.html#Scoped-Slots
-[dynamic argument]: https://vuejs.org/v2/guide/syntax.html#Dynamic-Arguments
