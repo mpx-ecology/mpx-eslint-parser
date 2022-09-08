@@ -65,7 +65,7 @@ function transformReference(reference: escopeTypes.Reference): Reference {
 function transformVariable(variable: escopeTypes.Variable): Variable {
     const ret: Variable = {
         id: variable.defs[0].name as ESLintIdentifier,
-        kind: variable.scope.type === "for" ? "v-for" : "scope",
+        kind: variable.scope.type === "for" ? "wx:for" : "scope",
         references: [],
     }
     Object.defineProperty(ret, "references", { enumerable: false })

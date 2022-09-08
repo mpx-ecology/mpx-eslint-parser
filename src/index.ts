@@ -94,6 +94,7 @@ export function parseForESLint(
     code: string,
     options: any,
 ): AST.ESLintExtendedProgram {
+    // 研究了下vue最新的实现，有点难搞，重构了很多
     //eslint-disable-next-line no-param-reassign
     options = Object.assign(
         {

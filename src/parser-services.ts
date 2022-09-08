@@ -65,6 +65,9 @@ export function define(
         defineTemplateBodyVisitor(
             templateBodyVisitor: { [key: string]: (...args: any) => void },
             scriptVisitor?: { [key: string]: (...args: any) => void },
+            options?: {
+                templateBodyTriggerSelector: "Program" | "Program:exit"
+            },
         ): object {
             if (scriptVisitor == null) {
                 scriptVisitor = {} //eslint-disable-line no-param-reassign
@@ -72,7 +75,10 @@ export function define(
             if (rootAST.templateBody == null) {
                 return scriptVisitor
             }
-
+            const templateBodyTriggerSelector =
+                options && options.templateBodyTriggerSelector
+                    ? options.templateBodyTriggerSelector
+                    : "Program:exit"
             let emitter = emitters.get(rootAST)
 
             // If this is the first time, initialize the intermediate event emitter.
@@ -81,8 +87,9 @@ export function define(
                 emitter.setMaxListeners(0)
                 emitters.set(rootAST, emitter)
 
-                const programExitHandler = scriptVisitor["Program:exit"]
-                scriptVisitor["Program:exit"] = node => {
+                const programExitHandler =
+                    scriptVisitor[templateBodyTriggerSelector]
+                scriptVisitor[templateBodyTriggerSelector] = node => {
                     try {
                         if (typeof programExitHandler === "function") {
                             programExitHandler(node)
@@ -99,7 +106,9 @@ export function define(
                     } finally {
                         // eslint-disable-next-line @mysticatea/ts/ban-ts-ignore
                         // @ts-ignore
-                        scriptVisitor["Program:exit"] = programExitHandler
+                        scriptVisitor[
+                            templateBodyTriggerSelector
+                        ] = programExitHandler
                         emitters.delete(rootAST)
                     }
                 }
