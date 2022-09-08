@@ -554,9 +554,11 @@ function parseAttributeValue(
             variables: [],
             references: [],
         }
-    } else if (directiveName === "for") {
-        result = parseVForExpression(value, locationCalculator, parserOptions)
-    } else if (directiveName === "on" && directiveKey.argument != null) {
+    }
+    // else if (directiveName === "for") {
+    //     result = parseVForExpression(value, locationCalculator, parserOptions)
+    // }
+    else if (directiveName === "on" && directiveKey.argument != null) {
         result = parseVOnExpression(value, locationCalculator, parserOptions)
     } else if (
         directiveName === "slot" ||
