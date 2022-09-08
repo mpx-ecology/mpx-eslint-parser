@@ -29,7 +29,7 @@ import { LocationCalculator } from "../common/location-calculator"
 import {
     ExpressionParseResult,
     parseExpression,
-    parseVForExpression,
+    // parseVForExpression,
     parseVOnExpression,
     parseSlotScopeExpression,
 } from "../script"
