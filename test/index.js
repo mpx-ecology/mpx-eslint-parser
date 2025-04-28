@@ -14,7 +14,7 @@ const path = require("path")
 const fs = require("fs-extra")
 const parse = require("../src").parse
 const parseForESLint = require("../src").parseForESLint
-const eslint = require("./fixtures/eslint")
+const eslint = require("eslint")
 const CLIEngine = eslint.CLIEngine
 const Linter = eslint.Linter
 

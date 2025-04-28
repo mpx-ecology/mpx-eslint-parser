@@ -11,7 +11,7 @@
 
 const path = require("path")
 const fs = require("fs-extra")
-const { RuleTester } = require("./fixtures/eslint")
+const { RuleTester } = require("eslint")
 
 //------------------------------------------------------------------------------
 // Helpers

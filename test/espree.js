@@ -28,7 +28,7 @@ function parentMain() {
  */
 function childMain() {
     const assert = require("assert")
-    const { Linter } = require("./fixtures/eslint")
+    const { Linter } = require("eslint")
     const linter = new Linter()
     linter.defineParser("vue-eslint-parser", require("../src"))
 

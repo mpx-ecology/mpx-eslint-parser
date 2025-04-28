@@ -14,7 +14,7 @@ const fs = require("fs")
 const path = require("path")
 const lodash = require("lodash")
 const parser = require("../src")
-const Linter = require("./fixtures/eslint").Linter
+const Linter = require("eslint").Linter
 
 //------------------------------------------------------------------------------
 // Helpers
