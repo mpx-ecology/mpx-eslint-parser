@@ -1,4 +1,0 @@
-<template>
-    &unknown
-    &unknown;
-</template>
