@@ -140,7 +140,7 @@ function normalizeLeft(
  */
 function getCommaTokenBeforeNode(tokens: Token[], node: Node): Token | null {
     let tokenIndex = sortedIndexBy(
-        tokens,
+        tokens as { range: [number, number] }[],
         { range: node.range },
         t => t.range[0],
     )

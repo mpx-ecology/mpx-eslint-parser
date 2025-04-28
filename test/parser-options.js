@@ -5,19 +5,14 @@
 "use strict"
 
 const assert = require("assert")
-const { rules } = require("@mysticatea/eslint-plugin")
 const { parseForESLint } = require("../src")
-const eslint = require("./fixtures/eslint")
+const eslint = require("eslint")
 const Linter = eslint.Linter
 
 describe("parserOptions", () => {
     describe("parser", () => {
         const linter = new Linter()
         linter.defineParser("vue-eslint-parser", { parseForESLint })
-        linter.defineRule(
-            "vue/valid-template-root",
-            rules["vue/valid-template-root"]
-        )
 
         it("false then skip parsing '<script>'.", () => {
             const code = `<template>Hello</template>
@@ -26,10 +21,7 @@ describe("parserOptions", () => {
                 parser: "vue-eslint-parser",
                 parserOptions: {
                     parser: false,
-                },
-                rules: {
-                    "vue/valid-template-root": "error",
-                },
+                }
             }
             const messages = linter.verify(code, config, "test.vue")
 
