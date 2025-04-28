@@ -104,7 +104,6 @@ export function define(
                             generator,
                         )
                     } finally {
-                        // eslint-disable-next-line @mysticatea/ts/ban-ts-ignore
                         // @ts-ignore
                         scriptVisitor[
                             templateBodyTriggerSelector

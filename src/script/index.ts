@@ -542,7 +542,6 @@ export interface ExpressionParseResult<T extends Node> {
 }
 function loadParser(parser: string) {
     if (parser !== "espree") {
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
         return require(parser)
     }
     return getEspree()
@@ -601,7 +600,6 @@ export function parseScript(
         ? parserOptions.parser
         : getEspree()
     const result: any =
-        // eslint-disable-next-line @mysticatea/ts/unbound-method
         typeof parser.parseForESLint === "function"
             ? parser.parseForESLint(code, parserOptions)
             : parser.parse(code, parserOptions)

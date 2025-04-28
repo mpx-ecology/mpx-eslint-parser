@@ -60,7 +60,6 @@ export function getEspree(): ESLintCustomParser {
             }
         }
         if (!espreeCache) {
-            //eslint-disable-next-line @mysticatea/ts/no-require-imports
             espreeCache = require("espree")
         }
     }
