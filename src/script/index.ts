@@ -11,6 +11,7 @@ import {
     ESLintArrayPattern,
     ESLintCallExpression,
     ESLintExpression,
+    ESLintProgram,
     ESLintExpressionStatement,
     ESLintExtendedProgram,
     ESLintForInStatement,
@@ -539,6 +540,48 @@ export interface ExpressionParseResult<T extends Node> {
     references: Reference[]
     variables: Variable[]
 }
+function loadParser(parser: string) {
+    if (parser !== "espree") {
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
+        return require(parser)
+    }
+    return getEspree()
+}
+
+/**
+ * The type of basic ESLint custom parser.
+ * e.g. espree
+ */
+export type BasicParserObject<R = ESLintProgram> = {
+    parse(code: string, options: any): R
+    parseForESLint: undefined
+}
+/**
+ * The type of ESLint custom parser enhanced for ESLint.
+ * e.g. @babel/eslint-parser, @typescript-eslint/parser
+ */
+export type EnhancedParserObject<R = ESLintExtendedProgram> = {
+    parseForESLint(code: string, options: any): R
+    parse: undefined
+}
+export type ParserObject<R1 = ESLintExtendedProgram, R2 = ESLintProgram> =
+    | EnhancedParserObject<R1>
+    | BasicParserObject<R2>
+export function isParserObject<R1, R2>(
+    value: ParserObject<R1, R2> | {} | undefined | null,
+): value is ParserObject<R1, R2> {
+    return isEnhancedParserObject(value) || isBasicParserObject(value)
+}
+export function isEnhancedParserObject<R>(
+    value: EnhancedParserObject<R> | {} | undefined | null,
+): value is EnhancedParserObject<R> {
+    return Boolean(value && typeof (value as any).parseForESLint === "function")
+}
+export function isBasicParserObject<R>(
+    value: BasicParserObject<R> | {} | undefined | null,
+): value is BasicParserObject<R> {
+    return Boolean(value && typeof (value as any).parse === "function")
+}
 
 /**
  * Parse the given source code.
@@ -552,10 +595,11 @@ export function parseScript(
     parserOptions: any,
 ): ESLintExtendedProgram {
     const parser: ESLintCustomParser =
-        typeof parserOptions.parser === "string"
-            ? // eslint-disable-next-line @mysticatea/ts/no-require-imports
-              require(parserOptions.parser)
-            : getEspree()
+    typeof parserOptions.parser === "string"
+        ? loadParser(parserOptions.parser)
+        : isParserObject(parserOptions.parser)
+        ? parserOptions.parser
+        : getEspree()
     const result: any =
         // eslint-disable-next-line @mysticatea/ts/unbound-method
         typeof parser.parseForESLint === "function"

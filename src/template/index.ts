@@ -574,6 +574,9 @@ function parseAttributeValue(
         result = parseExpression(value, locationCalculator, parserOptions, {
             allowFilters: true,
         })
+    } else if (directiveName === "key") {
+        const handleThisValue = value.replace('*', '')
+        result = parseExpression(handleThisValue, locationCalculator, parserOptions);
     } else {
         result = parseExpression(value, locationCalculator, parserOptions)
     }

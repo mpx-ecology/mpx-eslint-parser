@@ -69,6 +69,12 @@ export interface ESLintExtendedProgram {
     scopeManager?: ScopeManager
 }
 
+export interface ESLintExtendedProgram {
+    ast: ESLintProgram
+    services?: {}
+    visitorKeys?: { [type: string]: string[] }
+    scopeManager?: ScopeManager
+}
 export interface ESLintProgram extends HasLocation, HasParent {
     type: "Program"
     sourceType: "script" | "module"
