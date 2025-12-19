@@ -567,11 +567,15 @@ function parseAttributeValue(
     const curlyBraces2 = thirdChar === "{"
     const charlen = [quoted, curlyBraces1, curlyBraces2].filter(item => item)
         .length
-    const value = parseMustache(node.value)
     const locationCalculator = globalLocationCalculator.getSubCalculatorAfter(
         node.range[0] + charlen,
     )
     const directiveName = directiveKey.name.name
+    let value = parseMustache(node.value)
+    // The string bound to the method is the method name.
+    if (directiveName.startsWith("bind") && directiveName !== "bind") {
+        value = JSON.parse(value)
+    }
 
     let result: ExpressionParseResult<
         | ESLintExpression
