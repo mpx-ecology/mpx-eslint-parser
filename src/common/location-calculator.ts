@@ -141,10 +141,15 @@ export class LocationCalculator {
         const gap = this._getGap(error.index)
         const diff = this.baseOffset + Math.max(0, gap)
 
-        error.index += diff
-
-        const loc = this._getLocation(error.index)
-        error.lineNumber = loc.line
-        error.column = loc.column
+        if (error.constructor.name === "TSError") {
+            // TSError's index, lineNumber, and column properties are read-only, and the location property needs to be modified. Refer to https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/typescript-estree/src/node-utils.ts#L662
+            // @ts-ignore: TSError has `location` property.
+            error.location.start = this._getLocation(error.index + diff)
+        } else {
+            error.index += diff
+            const loc = this._getLocation(error.index)
+            error.lineNumber = loc.line
+            error.column = loc.column
+        }
     }
 }
