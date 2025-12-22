@@ -38,6 +38,8 @@ import {
 // const shorthandNameMap = { ":": "bind", ".": "bind", "@": "on", "#": "slot" }
 const invalidDynamicArgumentNextChar = /^[\s\r\n=/>]$/u
 
+const tagREG = /\{\{((?:.|\n|\r)+?)\}\}(?!})/g
+
 /**
  * Get the belonging document of the given node.
  * @param leafNode The node to get.
@@ -503,6 +505,38 @@ function insertError(
 }
 
 /**
+ * Analyze mustache content, refer to https://github.com/didi/mpx/blob/master/packages/webpack-plugin/lib/template-compiler/compiler.js#L1723
+ * @param raw Raw attribute value.
+ */
+function parseMustache(raw = '') {
+  if (!tagREG.test(raw)) {
+    return JSON.stringify(raw)
+  }
+
+  tagREG.lastIndex = 0
+  const ret = []
+  let lastIndex = 0
+  let m
+
+  while ((m = tagREG.exec(raw))) {
+    if (m.index > lastIndex) {
+      ret.push(JSON.stringify(raw.slice(lastIndex, m.index)))
+    }
+
+    const exp = m[1].trim()
+    if (exp) ret.push(`${exp}`)
+
+    lastIndex = tagREG.lastIndex
+  }
+
+  if (lastIndex < raw.length) {
+    ret.push(JSON.stringify(raw.slice(lastIndex)))
+  }
+
+  return ret.length === 1 ? ret[0] : `${ret.join('+')}`
+}
+
+/**
  * Parse the given attribute value as an expression.
  * @param code Whole source code text.
  * @param parserOptions The parser options to parse expressions.
@@ -533,11 +567,15 @@ function parseAttributeValue(
     const curlyBraces2 = thirdChar === "{"
     const charlen = [quoted, curlyBraces1, curlyBraces2].filter(item => item)
         .length
-    const value = node.value.replace(/^\{\{|\}\}$/gu, "")
     const locationCalculator = globalLocationCalculator.getSubCalculatorAfter(
         node.range[0] + charlen,
     )
     const directiveName = directiveKey.name.name
+    let value = parseMustache(node.value)
+    // The string bound to the method is the method name.
+    if (directiveName.startsWith("bind") && directiveName !== "bind") {
+        value = JSON.parse(value)
+    }
 
     let result: ExpressionParseResult<
         | ESLintExpression

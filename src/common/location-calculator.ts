@@ -140,11 +140,17 @@ export class LocationCalculator {
     public fixErrorLocation(error: ParseError) {
         const gap = this._getGap(error.index)
         const diff = this.baseOffset + Math.max(0, gap)
+        const offset = error.index + diff
+        const loc = this._getLocation(offset)
 
-        error.index += diff
-
-        const loc = this._getLocation(error.index)
-        error.lineNumber = loc.line
-        error.column = loc.column
+        if (error.constructor.name === "TSError") {
+            // TSError's index, lineNumber, and column properties are read-only, and the location property needs to be modified. Refer to https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/typescript-estree/src/node-utils.ts#L662
+            // @ts-ignore: TSError has `location` property.
+            error.location.start = {...loc, offset}
+        } else {
+            error.index = offset
+            error.lineNumber = loc.line
+            error.column = loc.column
+        }
     }
 }
