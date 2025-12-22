@@ -537,6 +537,19 @@ function parseMustache(raw = '') {
 }
 
 /**
+ * Check whether the given string is quoted or not.
+ * @param str The string to check.
+ * @returns `true` if the string is quoted.
+ */
+function isQuoted(str: string): boolean {
+  if (str.length < 2) return false
+  const first = str[0]
+  const last = str[str.length - 1]
+  return (first === last) && (first === '"' || first === "'")
+}
+
+
+/**
  * Parse the given attribute value as an expression.
  * @param code Whole source code text.
  * @param parserOptions The parser options to parse expressions.
@@ -572,9 +585,10 @@ function parseAttributeValue(
     )
     const directiveName = directiveKey.name.name
     let value = parseMustache(node.value)
-    // The string bound to the method is the method name.
-    if (directiveName.startsWith("bind") && directiveName !== "bind") {
-        value = JSON.parse(value)
+    // The string bound to the method is the method name. (eg: bindtap="fn" -> bindtap="{{fn}}")
+    if (directiveName.startsWith("bind") && directiveName !== "bind" && isQuoted(value)) {
+        // If the Mustache parsing results in a string, it should be treated as a variable to complete the use check.
+        value = JSON.parse(value);
     }
 
     let result: ExpressionParseResult<
